@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Personal Portfolio Template</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Template css Files -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/skins/pink.css">
+    <script>
+
+
+   // On Click hand emoji will take you to the top of the page
+document.getElementById('top-button').addEventListener('click',function(){
+    window.scrollTo(0,0);
+});
+
+$(window).scroll(function(){
+  var threshold = 208; // number of pixels before bottom of page that you want to start fading
+  var op = (($(document).height() - $(window).height()) - $(window).scrollTop()) / threshold;
+  if( op <= 13 ){
+    $("#top-button").show();
+  } else {
+    $("#top-button").hide();
+  }
+});
+
+// Toggle between DAy and Night Mode
+$('#switch1').on('click', function(){
+  $('body').toggleClass('night')
+})
+
+
+// If user visit after 7 pm in night the body will change the style to night class
+$(document).ready(function(){
+  var date = new Date();
+  var current_time = date.getHours();
+  if (current_time > 19 || current_time < 6)
+    // If time is after 7PM or before 6AM, apply night theme to ‘body’
+    document.body.className = "night";
+  else
+    // Else use ‘day’ theme
+    document.body.className = "";
+});
+
+$(window).load(function() {
+      $("#top-button").hide();
+});
+
+
+// If you hover over the languages I used in project Box it will do fade in animation
+$('.project_used span').on({
+    mouseover: function() {
+        event.preventDefault();
+        $(this).animate({opacity: 0.25});
+    },
+    mouseout: function() {
+        event.preventDefault();
+        $(this).animate({opacity: 1});
+    }
+});
+
+    </script>
+
+</head>
+  <body id="body">
+    <!----main container----->
+    <div class="main-container">
+      <div class="switch-wrapper"> 
+      </a>
+      <div class="sun"></div> 
+      <div class="toggle-wrapper">
+        <input type="checkbox" id="switch"  />
+        <label for="switch" id="switch1" >Toggle</label> 
+      </div>
+      <div class="moon"></div>
+    </div>
+      <div class="aside">
+        <!--logo---->
+        <div class="logo">
+          <a href="#">Aaftab</a>
+        </div>
+        <!----nav toogle button---->
+        <div class="nav-toogler">
+          <span></span>
+        </div>
+        <!--nav----->
+        <ul class="nav">
+          <li>
+            <a href="#home" class="active"><i class="fa fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href="#about"><i class="fa fa-user"></i>About Me</a>
+          </li>
+          <li>
+            <a href="#service"><i class="fa fa-list"></i>Services</a>
+          </li>
+          <li>
+            <a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a>
+          </li>
+          <li>
+            <a href="#blog"><i class="fa fa-envelope"></i>Projects</a>
+          </li>
+          <li>
+            <a href="#contact"><i class="fa fa-comments"></i>Contact</a>
+          </li>
+        </ul>
+        <!--copyright---->
+        <div class="copyright-text">&copy; 2023 #Aafi IT</div>
+      </div>
+      <!---main content----->
+      <div class="main-content">
+        <section class="home-section section" id="home">
+          <div class="container">
+            <div class="intro">
+              <img
+                src="images/selfishnesss.png"
+                alt="profile"
+                class="shadow-dark"
+              />
+              <h1>Mohd Aaftab Alam</h1>
+              <p>I am a Self Dependent and proactive Learner</p>
+              <div class="social-links">
+                <a href="https://github.com/crazyhackkk"><i class="fa fa-github"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/mohd-aaftab-alam-49b04a20a/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!---home sectioon end-->
+
+        <!--About-Section----->
+        <section class="about section " id="about">
+          <div class="container">
+            <div class="row">
+              <div class="section-tittle padd-15">
+                <h2>About Me</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="about-content padd-15">
+                <div class="row">
+                  <div class="about-text padd-15">
+                    <h3>I'm Mohd Aaftab Alam and I'm an <span> Aspiring Software Engineer </span></h3>
+                    <p>
+                      I am persuing Master's degree in Computer Science stream from
+                      <a class = "underline-link" href="#" target="_blank">
+                      Lovely Professional University</a> 2022-2024 Batch .
+                      I have not done any internship till now but i wanted to do. <br>
+                      And waiting for opportunities..
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="personal-info padd-15">
+                    <div class="row">
+                      <div class="info-item padd-15">
+                        <p>Birthday : <span>14th March 2002 </span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Age : <span>21</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Website : <span>www.domain.com</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Email : <span>neur9876@gmail.com</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>
+                          Degree: <span>Master's in Computer Science </span>
+                        </p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Phone : <span>6392144686</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>City : <span>Delhi</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Freelence : <span>Available</span></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="buttons padd-15">
+                        <a href="#" class="btn">Download CV</a>
+                        <a href="https://www.linkedin.com/in/mohd-aaftab-alam-49b04a20a"  class="btn" target="_blank">Connect Me</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skills padd-15">
+                    <div class="row">
+                      <div class="skill-item padd-15">
+                        <h5>Javascript</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 82%"></div>
+                          <div class="skill-percentage">82%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>C</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 80%"></div>
+                          <div class="skill-percentage">80%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>C++ | 5 star on Hacker-Rank | GOLD Badge</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 85%"></div>
+                          <div class="skill-percentage">85%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>Java | 4 star on Hacker-Rank | SILVER Badge</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 80%"></div>
+                          <div class="skill-percentage">80%</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="education padd-15">
+                    <h3 class="title">Education</h3>
+                    <div class="row">
+                      <div class="timeline-box padd-15">
+                        <div class="timeline shadow-dark">
+                          <!---timeline-items----------------->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>                            
+                            <h4 class="timeline-title">
+                              Masters in Computer Application 
+                            </h4>
+                            <h6 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2022 - 2024
+                            </h6>
+                            <p class="timeline-text">
+                              CGPA 8.96<br>Lovely Professional University<br>
+                              Punjab, India
+                            </p>
+                          </div>
+                          <!---timeline item ends-->
+                          <!---timeline-items----------------->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>                            
+                            <h4 class="timeline-title">
+                              Bachaelors in Computer Application
+                            </h4>
+                            <h6 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2019 - 2022
+                            </h6>
+                            <p class="timeline-text">
+                              CGPA 7.10<br>Kamla Nehru Institute of physical and social Sciences<br>
+                              Sultanpur Uttar Pradesh, India
+                            </p>
+                          </div>
+                          <!---timeline item ends-->
+                          <!---timeline-items----------------->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h4 class="timeline-title">Senior Secondary School Examination                              
+                            </h4>
+                            <h6 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2016 - 2018
+                            </h6>
+                            <p class="timeline-text">
+                              CGPA 7.64<br>G Buddha Inter College<br>
+                              Uttar Pradesh, India
+                            </p>
+                          </div>
+                          <!---timeline item ends-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="experience padd-15">
+                    <h3 class="title">Experience</h3>
+                    <h4></h4>
+                    <!-- <div class="row">
+                      <div class="timeline-box padd-15">
+                        <div class="timeline shadow-dark">
+                          
+
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h6 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2013 - 2015
+                            </h6>
+                            <h4 class="timeline-title">Backend Developer</h4>
+                            <p class="timeline-text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit. Quisque scelerisque diam non nisi semper, et
+                              elementum lorem ornare.
+                            </p>
+                          </div>
+                          
+
+
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h6 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2011 - 2013
+                            </h6>
+                            <h4 class="timeline-title">Frontend Developer</h4>
+                            <p class="timeline-text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit. Quisque scelerisque diam non nisi semper, et
+                              elementum lorem ornare.
+                            </p>
+                          </div>
+                          
+
+
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h6 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2008 - 2011
+                            </h6>
+                            <h4 class="timeline-title">Graphic Designer</h4>
+                            <p class="timeline-text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit. Quisque scelerisque diam non nisi semper, et
+                              elementum lorem ornare.
+                            </p>
+                          </div>
+                          
+                          
+                        </div>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </section>
+        <!--About-Section-Ends----->
+        <!----Service Section-->
+        <section class="service section" id="service">
+          <div class="container">
+            <div class="row">
+              <div class="section-tittle padd-15">
+                <h2>Services</h2>
+              </div>
+            </div>
+            <div class="row">
+              <!--service iteams-->
+              <div class="service-item padd-15">
+                <div class="service-item-inner">
+                  <div class="icon"><i class="fa fa-linux"></i></div>
+                  <h4>Application Development</h4>
+                  <p>
+                    "Enthusiast application developer with a passion for creating innovative solutions. 
+                    Portfolio showcases expertise in developing user-friendly, scalable, and reliable 
+                    applications using diverse technologies."
+                  </p>
+                </div>
+              </div>
+              <!--service iteams Ends--->
+              <!--service iteams-->
+              <div class="service-item padd-15">
+                <div class="service-item-inner">
+                  <div class="icon"><i class="fa fa-film"></i></div>
+                  <h4>Software Testing</h4>
+                  <p>
+                    As a software tester, my portfolio showcases my ability to identify and report defects 
+                    in software applications, as well as my skills in test planning, execution, and analysis.
+                  </p>
+                </div>
+              </div>
+              <!--service iteams Ends-->
+              <!--service iteams-->
+              <div class="service-item padd-15">
+                <div class="service-item-inner">
+                  <div class="icon"><i class="fa fa-photo"></i></div>
+                  <h4>Web Development</h4>
+                  <p>
+                    As a skilled developer, I specialize in creating engaging and 
+                    responsive websites that deliver exceptional user experiences.
+                  </p>
+                </div>
+              </div>
+              <!--service iteams Ends--->
+              <!--service iteams-->
+              <div class="service-item padd-15">
+                <div class="service-item-inner">
+                  <div class="icon"><i class="fa fa-code"></i></div>
+                  <h4>Web Designing</h4>
+                  <p>
+                    a skilled web designer with a passion for creating beautiful, 
+                    user-friendly websites that help businesses and individuals achieve their online goals."
+                  </p>
+                </div>
+              </div>
+              <!--service iteams Ends--->              
+              <!--service iteams----->
+              <div class="service-item padd-15">
+                <div class="service-item-inner">
+                  <div class="icon"><i class="fa fa-rocket"></i></div>
+                  <h4>Content Writing</h4>
+                  <p>
+                    "I am a versatile content writer with a passion for crafting engaging and informative copy. 
+                    My portfolio showcases my ability to write for a variety of industries and audiences."
+                  </p>
+                </div>
+              </div>
+              <!--service iteams Ends---->
+              <!--service iteams-->
+              <div class="service-item padd-15">
+                <div class="service-item-inner">
+                  <div class="icon"><i class="fa fa-paint-brush"></i></div>
+                  <h4>Logo Designing</h4>
+                  <p>
+                    A creative logo designer with a passion for crafting unique and memorable brand identities 
+                    that resonate with target audiences. My portfolio showcases my expertise in delivering innovative 
+                    and impactful design solutions that drive business success.
+                  </p>
+                </div>
+              </div>
+              <!--service iteams Ends--->
+            </div>
+          </div>
+        </section>
+        <!----Service-Section-Ends----->
+        <!--------------Portfolio--------------->
+        <section class="portfolio section" id="portfolio">
+          <div class="container">
+            <div class="row">
+              <div class="section-tittle padd-15">
+                <h2>Portfolio</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="portfolio-filter padd-15">
+                <button type="button" class="active" data-filter="all">
+                  All
+                </button>
+                <button type="button" data-filter="web-design">
+                  Web Design
+                </button>
+                <button type="button" data-filter="photography">
+                  Photography
+                </button>
+                <button type="button" data-filter="wordpress">Application Dev</button>
+              </div>
+            </div>
+            <div class="row">
+              <!------Portfolio Items------------->
+              <div class="portfolio-item padd-15" data-catagory="web-design">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <img src="images/portfolio/web.jpg" alt="portfolio" />
+                  </div>
+                  <div class="portfolio-info">
+                    <h4>Web Design</h4>
+                    <div class="icons"><i class="fa fa-search"></i></div>
+                  </div>
+                </div>
+              </div>
+              <!------Portfolio Items ends------------->
+              <!------Portfolio Items------------->
+              <div class="portfolio-item padd-15" data-catagory="wordpress">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <img src="images/portfolio/Application dev.jpg" alt="portfolio" />
+                  </div>
+                  <div class="portfolio-info">
+                    <h4>Application Dev</h4>
+                    <div class="icons"><i class="fa fa-search"></i></div>
+                  </div>
+                </div>
+              </div>
+              <!------Portfolio Items ends------------->
+              <!------Portfolio Items------------->
+              <div class="portfolio-item padd-15" data-catagory="web-design">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <img src="images/portfolio/la.jpg" alt="portfolio" />
+                  </div>
+                  <div class="portfolio-info">
+                    <h4>Web Design</h4>
+                    <div class="icons"><i class="fa fa-search"></i></div>
+                  </div>
+                </div>
+              </div>
+              <!------Portfolio Items ends------------->
+              <!------Portfolio Items------------->
+              <div class="portfolio-item padd-15" data-catagory="photography">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <img src="images/portfolio/nightdev.webp" alt="portfolio" />
+                  </div>
+                  <div class="portfolio-info">
+                    <h4>Photography</h4>
+                    <div class="icons"><i class="fa fa-search"></i></div>
+                  </div>
+                </div>
+              </div>
+              <!------Portfolio Items ends------------->
+              <!------Portfolio Items------------->
+              <div class="portfolio-item padd-15" data-catagory="wordpress">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <img src="images/portfolio/dev.jpg" alt="portfolio" />
+                  </div>
+                  <div class="portfolio-info">
+                    <h4>Application Dev</h4>
+                    <div class="icons"><i class="fa fa-search"></i></div>
+                  </div>
+                </div>
+              </div>
+              <!------Portfolio Items ends------------->
+              <!------Portfolio Items------------->
+              <div class="portfolio-item padd-15" data-catagory="web-design">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <img src="images/portfolio/webdev1.jpg" alt="portfolio" />
+                  </div>
+                  <div class="portfolio-info">
+                    <h4>Web Design</h4>
+                    <div class="icons"><i class="fa fa-search"></i></div>
+                  </div>
+                </div>
+              </div>
+              <!------Portfolio Items ends------------->
+            </div>
+          </div>
+        </section>
+        <!--------------Portfolio Ends-------------->
+
+        <!----Blog Section----------------->
+        <section class="blog section" id="blog">
+          <div class="container">
+            <div class="row">
+              <div class="section-tittle padd-15">
+                <h2>Latest Projects</h2>
+              </div>
+            </div>
+
+            <div class="row">
+              <!---Blog Item -------->
+
+              <div class="blog-item padd-15">
+                <div class="blog-item-inner shadow-dark">
+                  <div class="blog-img">
+                    <img src="images/blog/port.jpg" alt="blog" />
+                    <div class="blog-date">May 2023</div>
+                  </div>
+                  <div class="blog-info">
+                    <h4 class="blog-tittle">Personal Portfolio</h4>
+                    <p class="blog-description">
+                      "Introducing 'Personal Portfolio,' the digital embodiment of my professional journey. 
+                      With a sleek design and intuitive interface, this platform showcases my skills, projects, 
+                      and accomplishments in a dynamic and engaging way. From web development to graphic design, 
+                      each section provides a window into my creative process and expertise. Whether you're a 
+                      potential employer or simply curious, I invite you to explore my portfolio and discover the possibilities."
+                    </p>
+                    <p class="blog-tags">
+                      Domain : <a href="">HTML</a> <a href="">CSS</a><br>
+                      Click : <a href="#"> to View Project</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!---Blog Item Ends-------->
+
+              <!---Blog Item -------->
+              <div class="blog-item padd-15">
+                <div class="blog-item-inner shadow-dark">
+                  <div class="blog-img">
+                    <img src="images/blog/city.jpg" alt="blog" />
+                    <div class="blog-date">April 2023</div>
+                  </div>
+                  <div class="blog-info">
+                    <h4 class="blog-tittle">Smart City Information System</h4>
+                    <p class="blog-description">
+                      Imagine a city that welcomes you with open arms, where every street, building, 
+                      and landmark comes alive with stories and information that enrich your experience.
+                      That's the vision behind our Smart City Information System - a cutting-edge software 
+                      solution designed to empower visitors, students, businessmen, and everyone in between 
+                      with the knowledge and insights they need to navigate and appreciate the city like a local.
+                    </p>
+                    <p class="blog-tags">
+                      Domain : <a href="">JAVA Swing</a> <a href="">JDBC</a> <a href="">MYSQL</a><br>
+                      Click : <a href="#"> to View Project</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!---Blog Item Ends-------->
+              
+              <!---Blog Item -------->
+
+              <div class="blog-item padd-15">
+                <div class="blog-item-inner shadow-dark">
+                  <div class="blog-img">
+                    <img src="images/blog/cloth.jpg" alt="blog" />
+                    <div class="blog-date">Dec 2022</div>
+                  </div>
+                  <div class="blog-info">
+                    <h4 class="blog-tittle">Cloth Store Management System</h4>
+                    <p class="blog-description">
+                      Say goodbye to tedious manual record-keeping with Cloth Store Management System - 
+                      the ultimate solution for efficient and seamless cloth management. Our software 
+                      empowers store owners to effortlessly add, delete, update, and display their inventory, 
+                      making running your shop a breeze. With our user-friendly interface and powerful features, 
+                      you'll have complete control over your stock, freeing up your time to focus on what really 
+                      matters - growing your business
+                    </p>
+                    <p class="blog-tags">
+                    Domain : <a href="">C++</a><br>
+                    Click : <a href="https://github.com/crazyhackkk/Cloth-Store-Management-System-" target="_blank"> to View Project</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!---Blog Item Ends-------->
+            </div>
+          </div>
+        </section>
+
+        <!----Blog Section Ends----------------->
+        <!--Contact Form------------>
+        <section class="contact section" id="contact">
+          <div class="container">
+            <div class="row">
+              <div class="section-tittle padd-15">
+                <h2>Contact Me</h2>
+              </div>
+            </div>
+            <div class="row">
+              <!--contact-info-item-->
+              <div class="contact-info-item padd-15">
+                <div class="icon"><i class="fa fa-phone"></i></div>
+                <h4> Call Us On</h4>
+                <p>+91 63921 446 86</p>
+              </div>
+              <!--contact-info-item Ends-->
+              <!--contact-info-item-->
+               <div class="contact-info-item padd-15">
+                <div class="icon"><i class="fa fa-map-marker"></i></div>
+                <h4> Location </h4>
+                <p>93 Mayur Vihar,New Delhi,India</p>
+              </div>
+              <!--contact-info-item Ends-->
+              <!--contact-info-item-->
+               <div class="contact-info-item padd-15">
+                <div class="icon"><i class="fa fa-envelope"></i></div>
+                <h4>Email</h4>
+                <p>mohdaaftab1422@gmail.com</p>
+              </div>
+              <!--contact-info-item Ends-->
+            </div>
+          <!---main contact content-->
+            <div class="row">
+              <form action="" class="contact-form padd-15">
+                <div class="row">
+                  <div class="form-item col-6 padd-15">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Name*">
+                    </div>
+                  </div>
+                  <div class="form-item col-6  padd-15">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Email*">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-item col-12 padd-15">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Subject*">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-item col-12 padd-15">
+                    <div class="form-group">
+                     <textarea class="form-control" placeholder="Your Message..."></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class=" col-12 padd-15">
+                    <div class="form-group">
+                     <button type="submit" class="btn">Send Message</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          <!---main---contact---content----Ends-->
+
+        <!--Contact Form Ends------------>
+      </div>
+      <!---main-content--Ends-->
+    </div>
+    <!--main-container-Ends--->
+    
+
+  
+
+    <!---Live Style Switcher Demo only Ends-->
+    <!--Template Javascript-->
+    <script src="js/script.js"></script>
+  
+  </body>
+</html>
